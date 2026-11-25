@@ -1,4 +1,8 @@
 spring:
   application:
     name: msa5-spring
+  web:
+    error:
+      include-stacktrace: always
+      include-message: always
 
