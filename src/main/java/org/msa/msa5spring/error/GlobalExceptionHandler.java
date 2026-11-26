@@ -47,6 +47,8 @@ public class GlobalExceptionHandler {
                         (existing, replacement) -> existing
                         //existing기존값 , replacement 새로운값
                 )); //최종연산메소드
+        log.debug("{}\n{}", "****유효성 체크에러****", errors); // log는 Logger의 객체
+
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(
@@ -69,7 +71,7 @@ public class GlobalExceptionHandler {
         log.debug("디버그 로깅");
         log.info("인포 로깅");
         log.warn("워닝 로깅");
-        log.error("에러 로깅");
+        log.error("에러 로깅", e);
 
 
         return ResponseEntity.status(500).body(new GlobalResponseDTO<>("E99", "시스템 에러", null));

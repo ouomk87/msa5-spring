@@ -11,5 +11,5 @@ logging:
   level:
     #error > warn > info > debug > trace
     root: warn
-    org.msa.msa5spring: error
+    org.msa.msa5spring: debug
 debug: false
