@@ -19,6 +19,12 @@ repositories {
 }
 
 dependencies {
+
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:4.1.0'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:4.1.0'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
     implementation 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
@@ -27,6 +33,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
 }
 
 tasks.named('test') {
